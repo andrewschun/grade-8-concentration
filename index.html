@@ -3,10 +3,10 @@
   <div class="viz-controls">
     <label class="form-label">Grid <select class="form-select" id="focus-size"><option value="10">10 × 10 · 1–100</option></select></label>
     <button type="button" id="focus-start" hidden>Start</button>
-    <button type="button" class="btn" id="focus-new">New grid</button>
+    
   </div>
   <div class="play-layout">
-    <section class="grid-panel" aria-labelledby="grid-heading"><h2 id="grid-heading">Concentration grid</h2><div id="focus-grid" aria-label="Concentration number grid"></div><p class="grid-hint">Select 1 to begin. You can also use Tab and Enter.</p></section>
+    <section class="grid-panel" aria-labelledby="grid-heading"><h2 id="grid-heading">Concentration grid</h2><div id="focus-grid" aria-label="Concentration number grid"></div><div class="grid-actions" style="margin-top:20px"><button type="button" class="btn" id="focus-new">New grid</button></div><p class="grid-hint">Select 1 to begin. You can also use Tab and Enter.</p></section>
     <aside class="play-sidebar" aria-label="Round progress and scores">
       <div class="round-stats tabular-nums"><div><span class="stat-label">Find</span><strong id="focus-next">1</strong></div><div><span class="stat-label">Time</span><strong id="focus-time">60 seconds</strong></div><div><span class="stat-label">Completed</span><strong id="focus-score">0 / 100</strong></div></div>
       <section id="score-chart" aria-labelledby="chart-title"><h2 id="chart-title">Your focus scores</h2><div class="chart-axis">Numbers found / 100</div><div class="vertical-chart"><div class="chart-ticks" aria-hidden="true"><span>100</span><span>75</span><span>50</span><span>25</span><span>0</span></div><div id="chart-bars"></div></div><p id="chart-note">Complete a round to build your averages.</p></section>
