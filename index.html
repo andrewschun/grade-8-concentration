@@ -43,7 +43,7 @@
  }
  let roundDay=null, dailyFallback={};
  function dayKey(date=new Date()){const parts=Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date).map(p=>[p.type,p.value]));return parts.year+'-'+parts.month+'-'+parts.day;}
- function dailyData(){try{const data=JSON.parse(localStorage.getItem('focus-daily-class29-v1')||'{}');return data&&typeof data==='object'&&!Array.isArray(data)?data:{};}catch{return dailyFallback;}}
+ function dailyData(){try{const data=JSON.parse(localStorage.getItem('focus-daily-class29-v1')||'{}');if(data&&typeof data==='object'&&!Array.isArray(data)&&!localStorage.getItem('focus-hailey-manual-reset-20261027')){if(data.Hailey&&typeof data.Hailey==='object'&&!Array.isArray(data.Hailey))delete data.Hailey[dayKey()];localStorage.setItem('focus-daily-class29-v1',JSON.stringify(data));localStorage.setItem('focus-hailey-manual-reset-20261027','done');}return data&&typeof data==='object'&&!Array.isArray(data)?data:{};}catch{return dailyFallback;}}
  function used(day=dayKey()){const value=dailyData()[student.value]?.[day];return Number.isInteger(value)&&value>0?value:0;}
  function dailyMax(){return student.value==='Hailey'?10:5;}
  function limitReached(){return used()>=dailyMax();}
